@@ -15,6 +15,8 @@ var BabySitter = function(startTime, endTime) {
         total += 12;
       } else if (i < 24) {
         total += 8;
+      } else {
+        total += 16;
       }
     }
     return total;
