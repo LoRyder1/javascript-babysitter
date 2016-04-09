@@ -23,9 +23,8 @@ var BabySitter = function(startTime, endTime) {
   };
 
   this.valid = function() { 
-    return valid; 
+    return valid;
   };
-
 };
 
 var GuessingGame = function(answer) {

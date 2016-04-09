@@ -26,27 +26,32 @@ describe("BabySitter", function() {
     it("schedule earlier than 5PM returns false", function() {
       setSchedule(16, 28);
       expect(sitting.schedule()).toBe(false);
-    })
+    });
 
     it("schedule later than 4AM returns false", function() {
       setSchedule(17, 29);
       expect(sitting.schedule()).toBe(false);
-    })
+    });
 
     it("pay for one hour at before BEDTIME RATE is 12", function() {
       setSchedule(17, 18);
       expect(sitting.calculatePay()).toEqual(12);
-    })
+    });
 
     it("pay for one hour at after BEDTIME_RATE is 8", function() {
       setSchedule(22,23);
       expect(sitting.calculatePay()).toEqual(8);
-    })
+    });
 
     it("pay for one hour at after MIDNIGHT_RATE is 16", function() {
       setSchedule(24, 25);
       expect(sitting.calculatePay()).toEqual(16);
-    })
+    });
+
+    it("calculate pay for full night", function() {
+      setSchedule(17, 28);
+      expect(sitting.calculatePay()).toEqual(140);
+    });
 
   });
 });
