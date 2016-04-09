@@ -4,11 +4,23 @@ var BabySitter = function(startTime, endTime) {
   this.schedule = function() {
     if (startTime >= 17 && endTime <= 28) {
       valid = true;
-    }
+    };
     return valid;
   };
 
-  this.valid = function() { return valid; }
+  this.calculatePay = function() {
+    var total = 0;
+    for (var i = startTime; i < endTime; i++ ) {
+      if (i < 22) {
+        total += 12;
+      }
+    }
+    return total;
+  };
+
+  this.valid = function() { 
+    return valid; 
+  };
 
 };
 
@@ -28,7 +40,5 @@ var GuessingGame = function(answer) {
       isSolved = false;
       return 'low';};
   }
-
   this.isSolved = function() {return isSolved;}
-
 };

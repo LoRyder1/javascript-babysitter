@@ -33,6 +33,11 @@ describe("BabySitter", function() {
       expect(sitting.schedule()).toBe(false);
     })
 
+    it("pay for one hour at before BEDTIME RATE is 12", function() {
+      setSchedule(17, 18);
+      expect(sitting.calculatePay()).toEqual(12);
+    })
+
   });
 });
 
