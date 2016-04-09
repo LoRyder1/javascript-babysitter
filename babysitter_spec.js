@@ -23,9 +23,55 @@ describe("BabySitter", function() {
       expect(sitting.schedule()).toBe(true);
     });
 
+    it("schedule earlier than 5PM returns false", function() {
+      setSchedule(16, 28);
+      expect(sitting.schedule()).toBe(false);
+    })
+
+    it("schedule later than 4AM returns false", function() {
+      // setSchedule()
+    })
+
   });
 });
 
+
+
+// it 'schedule begins no earlier than 5PM' do
+//     set_schedule(17, 28)
+//     expect(subject.valid?).to eq true
+//   end
+
+//   it 'schedule earlier than 5PM returns false' do
+//     set_schedule(16, 28)
+//     expect(subject.valid?).to eq false
+//   end
+
+//   it 'schedule later than 4AM returns false' do
+//     set_schedule(17, 29)
+//     expect(subject.valid?).to eq false
+//   end
+
+//   it 'pay for one hour at before BEDTIME RATE is 12' do
+//     set_schedule(17,18)
+//     expect(subject.calculate_pay).to eq 12
+//   end
+
+//   it 'pay for one hour at before MIDNIGHT RATE is 8' do
+//     set_schedule(22, 23)
+//     expect(subject.calculate_pay).to eq 8
+//   end
+
+//   it 'pay for one hour at after MIDNIGHT RATE is 16' do
+//     set_schedule(24, 25)
+//     expect(subject.calculate_pay).to eq 16
+//   end
+
+//   it 'calculate_pay for full night' do
+//     set_schedule(17, 28)
+//     expect(subject.calculate_pay).to eq 140
+//   end
+// end
 
 
 
