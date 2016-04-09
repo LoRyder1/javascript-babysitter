@@ -13,6 +13,8 @@ var BabySitter = function(startTime, endTime) {
     for (var i = startTime; i < endTime; i++ ) {
       if (i < 22) {
         total += 12;
+      } else if (i < 24) {
+        total += 8;
       }
     }
     return total;
