@@ -38,6 +38,11 @@ describe("BabySitter", function() {
       expect(sitting.calculatePay()).toEqual(12);
     })
 
+    it("pay for one hour at after BEDTIME_RATE is 8", function() {
+      setSchedule(22,23);
+      expect(sitting.calculatePay()).toEqual(8);
+    })
+
   });
 });
 
