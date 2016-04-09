@@ -2,7 +2,7 @@ var BabySitter = function(startTime, endTime) {
   var valid = false;
 
   this.schedule = function() {
-    if (startTime >= 17) {
+    if (startTime >= 17 && endTime <= 28) {
       valid = true;
     }
     return valid;

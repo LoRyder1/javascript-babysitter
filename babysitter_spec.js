@@ -29,7 +29,8 @@ describe("BabySitter", function() {
     })
 
     it("schedule later than 4AM returns false", function() {
-      // setSchedule()
+      setSchedule(17, 29);
+      expect(sitting.schedule()).toBe(false);
     })
 
   });
